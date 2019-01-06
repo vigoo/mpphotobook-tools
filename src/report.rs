@@ -24,7 +24,6 @@ pub struct Report {
 impl Report {
     pub fn parse<P: AsRef<Path>>(path: P) -> Result<Report> {
         let path_ref = path.as_ref();
-
         println!("Parsing {:?}", path_ref);
 
         let mut file = File::open(path_ref)?;
